@@ -876,7 +876,7 @@ def create_html():
     for s in os.listdir(BASE_DIR + '/mds'):
         if 'index' in s:
             continue
-        if not re.findall('(^[^\d-]+).md', s) == [] and not '@' in s and not '$' in s and not '&' in s:
+        if not re.findall('(^[^\d-]+).md', s) == [] and not '@' in s and not '$' in s and not s == '&.txt':
             indexer.append('#### [' + s.split('.')[0] + '](' + s.split('.')[0] + '.html ' + '"' + s.split('.')[0] + '")')
     indexer.append('----')
     indexer.append('#### [趋势]($.html ' + '"趋势")')
